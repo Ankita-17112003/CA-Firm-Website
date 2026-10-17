@@ -4,6 +4,7 @@ import Section from '../components/common/Section.jsx';
 import Button from '../components/common/Button.jsx';
 import CTA from '../components/common/CTA.jsx';
 import { industries } from '../data/industries.js';
+import { images } from '../config/images.js';
 
 export default function Industries() {
   return (
@@ -13,9 +14,10 @@ export default function Industries() {
         description="Accounting, taxation and compliance support for startups, SMEs, corporate businesses, professionals and individuals."
       />
       <PageHeader
-        title="Industries We Serve"
-        description="Financial, accounting, taxation and compliance needs differ from one client to the next. This is how we support each group."
-      />
+  title="Industries We Serve"
+  description="Financial, accounting, taxation and compliance needs differ from one client to the next. This is how we support each group."
+  image={images.meeting.src}
+/>
 
       {industries.map((item, i) => {
         const Icon = item.icon;

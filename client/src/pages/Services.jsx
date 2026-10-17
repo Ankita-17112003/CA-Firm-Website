@@ -6,6 +6,7 @@ import Section from '../components/common/Section.jsx';
 import Button from '../components/common/Button.jsx';
 import CTA from '../components/common/CTA.jsx';
 import { services } from '../data/services.js';
+import { images } from '../config/images.js';
 
 /*
  * Height (px) of your fixed/sticky site header. The quick-links bar sticks just
@@ -76,9 +77,10 @@ export default function Services() {
         description="Taxation, GST, audit, accounting, company registration, corporate compliance, financial planning and business consulting services."
       />
       <PageHeader
-        title="Services"
-        description="Taxation, compliance, audit and advisory support for individuals and businesses. Choose a service to jump to its details."
-      />
+  title="Services"
+  description="Taxation, compliance, audit and advisory support for individuals and businesses. Choose a service to jump to its details."
+  image={images.advisory.src}
+/>
 
       {/* Quick links: swipeable single row on phones, wrapping list on large screens */}
       <nav

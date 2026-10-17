@@ -15,15 +15,15 @@ import { site, hasRealEmail, hasRealPhone, whatsappLink } from '../config/site.j
 const CONTACT_HERO_SRC = '/image/contactHero.jpg';
 
 // Small uppercase label above a section heading
-const eyebrowClass = 'text-xs font-semibold uppercase tracking-[0.14em] text-sage sm:tracking-[0.18em]';
-// Large uppercase section heading (scales with the screen)
+// Small label above a section heading (sentence case, no tracking)
+const eyebrowClass = 'text-sm font-medium text-sage';
+// Section heading: regular weight, sentence case
 const headingClass =
-  'mt-2 break-words font-display text-2xl font-semibold uppercase leading-tight tracking-normal text-navy min-[400px]:text-[1.65rem] sm:mt-3 sm:text-3xl sm:tracking-wide lg:text-4xl';
+  'mt-1.5 break-words font-display text-2xl font-normal leading-snug text-navy sm:text-3xl lg:text-[2rem]';
 
-// Shared style for tappable contact links (44px tap height, wraps long values, visible keyboard focus)
+// Tappable contact links: same size and look as the other details; padding grows the tap area without moving the layout
 const linkClass =
-  'inline-flex min-h-11 items-center break-words rounded-sm font-medium text-navy underline-offset-4 [overflow-wrap:anywhere] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy';
-
+  '-my-2 inline-block break-words rounded-sm py-2 text-charcoal/85 underline decoration-navy/30 underline-offset-4 [overflow-wrap:anywhere] hover:text-navy hover:decoration-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy';
 // Map height: ~296px phones, ~368px small tablets, ~416px tablets, ~480px desktop
 const mapHeightClass = 'h-[18.5rem] sm:h-[23rem] md:h-[26rem] lg:h-[30rem]';
 
@@ -161,7 +161,8 @@ export default function Contact() {
       </Section>
 
       {/* Full-bleed map: edge to edge, full color, sage backdrop while it loads */}
-      <div className="w-full overflow-hidden border-t border-navy/10 bg-sage-50">
+      
+      <div className="w-full overflow-hidden border-t border-navy/10 bg-sage-50 px-4 py-6 sm:p-0">
         {site.mapsEmbedUrl ? (
           <iframe
             title="Office location on Google Maps"

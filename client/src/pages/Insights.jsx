@@ -8,6 +8,7 @@ import InsightCard from '../components/common/InsightCard.jsx';
 import LoadingState from '../components/common/LoadingState.jsx';
 import useInsights from '../hooks/useInsights.js';
 import { inputClass } from '../components/common/FormField.jsx';
+import { images } from '../config/images.js';
 
 export default function Insights() {
   const { insights, loading, error, reload } = useInsights();
@@ -33,10 +34,11 @@ export default function Insights() {
   return (
     <>
       <Seo title="Insights" description="Articles on taxation, GST compliance and financial planning." />
-      <PageHeader
-        title="Insights"
-        description="Short reads on taxation, GST compliance and financial planning. Articles marked Sample are placeholder content and not professional advice."
-      />
+     <PageHeader
+  title="Insights"
+  description="Short reads on taxation, GST compliance and financial planning. Articles marked Sample are placeholder content and not professional advice."
+  image={images.facade.src}
+/>
 
       <Section>
         {loading && <LoadingState label="Loading articles" />}
